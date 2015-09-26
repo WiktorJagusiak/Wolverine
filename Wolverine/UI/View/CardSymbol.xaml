@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Wolverine.UI.Control.CardSymbol"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Wolverine.UI.Control"
+             xmlns:wolverine="clr-namespace:Wolverine"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="20" Height="300" Width="200">
+    <Grid>
+        <Button x:Name="button" HorizontalAlignment="Left" Height="30" VerticalAlignment="Top" Width="20" Background="{Binding CurrentState, Converter={StaticResource CardSymbolStateToColorConverter}}" Click="Button_OnClick">
+            <local:CircleCardChooser x:Name="CircleCardChooser"  Height="57" Width="80" Visibility="Collapsed"/>
+        </Button>
+    </Grid>
+</UserControl>
